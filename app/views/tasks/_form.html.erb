@@ -1,0 +1,9 @@
+<%= form_for(task , remote: true, class: "form-group") do |f| %>
+<%= f.label :title, "Title", class: "form-label my-3" %>
+<%= f.text_field :title, class: "form-control"%>
+<%= f.label :details, "Details", class: "form-label my-3" %>
+<%= f.text_field :details, class: "form-control" %>
+<%= f.label :completed, "Task Done", class: "form-label my-3" %>
+<%= f.check_box :completed, class: "custom-control-input" if task.persisted?%>
+<%= f.submit class: "d-block btn btn-primary" %>
+<% end %>

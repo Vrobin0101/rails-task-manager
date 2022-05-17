@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <div class="list-group">
+    <% @tasks.each do |task| %>
+        <%= link_to "#{task.title}", task_path(task), class: "list-group-item- list-group-item-action task" %>
+      <% end %>
+  </div>
+  <%= link_to "Create a new task", new_task_path, class: "btn btn-primary mb-1" %>
+</div>
